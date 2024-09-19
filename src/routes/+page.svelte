@@ -1,15 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
 	import axios from 'axios';
-	import WeatherCard from '../components/WeatherCard.svelte';
+	import WeatherCard from '$lib/components/WeatherCard.svelte';
 
 	let city = '';
 	let weatherData = null;
 	let error = null;
-
 	async function fetchWeather() {
 		try {
-			const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://openweathermap.org/&ved=2ahUKEwiQ88OOlc-IAxX9BxAIHUtQF0oQFnoECA0QAQ&usg=AOvVaw018H_9U9cLmoQlvNn8NPy-&units=metric`);
+			const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4c462c567366d48e050a4f817c043bc8&units=metric`);
 			weatherData = response.data;
 			error = null;
 		} catch (err) {
