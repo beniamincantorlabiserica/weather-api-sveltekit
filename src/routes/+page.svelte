@@ -8,7 +8,7 @@
 	let error = null;
 	async function fetchWeather() {
 		try {
-			const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4c462c567366d48e050a4f817c043bc8&units=metric`);
+			const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=API_KEY&units=metric`);
 			weatherData = response.data;
 			error = null;
 		} catch (err) {
