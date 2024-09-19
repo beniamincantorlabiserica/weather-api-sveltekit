@@ -45,7 +45,7 @@
 						class="input input-bordered w-full"
 						on:keypress={(e) => e.key === 'Enter' && fetchWeather()}
 				/>
-				<button class="btn btn-primary" on:click={fetchWeather} disabled={loading}>
+				<button class="btn btn-primary w-full mt-4" on:click={fetchWeather} disabled={loading}>
 					{#if loading}
 						<span class="loading loading-spinner"></span>
 					{:else}
